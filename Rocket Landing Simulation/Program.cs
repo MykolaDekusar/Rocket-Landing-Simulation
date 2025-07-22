@@ -8,5 +8,23 @@
  */
 
 string rocket = "  _\n /_\\\n | |\n | |\n | |\n |_|\n /_\\\n UUU\n/UUU\\";
+string space = "\n";
+
 Console.WriteLine(rocket);
+//Let's loop to make the rocket descend
+
+for (int i = 0; i < 10; i++)
+{
+    Console.Clear();
+    for (int j = 0; j < i; j++)
+    {
+
+        Console.WriteLine(space);
+    }
+    
+    Console.WriteLine(rocket);
+    Thread.Sleep(500);
+}
+Console.WriteLine("\n \n \nThe rocket has landed. Woohoo! Another successful landing!");
+
 Console.ReadKey();  
