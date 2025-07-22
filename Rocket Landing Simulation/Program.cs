@@ -19,10 +19,12 @@ string rocket = "   ^\n" +
 " /___\\\n" +
 " UUUUU";
 
+string[] airEffects = { " ~ ~ ~", " . . .", " v v v", " * * *", " ^^^^^", " \" \" \"" };
+
 Console.WriteLine(rocket);
 //Let's loop to make the rocket descend
 
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < 50; i++)
 {
     
     Console.Clear();
@@ -34,7 +36,9 @@ for (int i = 0; i < 10; i++)
     }
     
     Console.WriteLine(rocket);
-    Thread.Sleep(500);
+    Console.WriteLine(airEffects[i % airEffects.Length]);
+    Console.WriteLine(airEffects[(i + 2) % airEffects.Length]);
+    Thread.Sleep(200);
 }
 
 Console.WriteLine("\nThe rocket has landed");
