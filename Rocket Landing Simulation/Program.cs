@@ -6,3 +6,7 @@
  * Remember, the key part of this challenge is to ensure the rocket descends smoothly,
  * giving the appearance of a controlled landing. You might need to experiment with adding empty lines and clearing the console to achieve the desired effect.
  */
+
+string rocket = "  _\n /_\\\n | |\n | |\n | |\n |_|\n /_\\\n UUU\n/UUU\\";
+Console.WriteLine(rocket);
+Console.ReadKey();  
