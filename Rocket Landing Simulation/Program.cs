@@ -7,24 +7,37 @@
  * giving the appearance of a controlled landing. You might need to experiment with adding empty lines and clearing the console to achieve the desired effect.
  */
 
-string rocket = "  _\n /_\\\n | |\n | |\n | |\n |_|\n /_\\\n UUU\n/UUU\\";
-string space = "\n";
+string rocket = "   ^\n" +
+"  / \\\n" +
+" |---|\n" +
+" |   |\n" +
+" |   |\n" +
+" |   |\n" +
+" |   |\n" +
+" |   |\n" +
+" |   |\n" +
+" /___\\\n" +
+" UUUUU";
 
 Console.WriteLine(rocket);
 //Let's loop to make the rocket descend
 
 for (int i = 0; i < 10; i++)
 {
+    
     Console.Clear();
+    Console.WriteLine($"Descending... Step {i + 1}");
     for (int j = 0; j < i; j++)
     {
 
-        Console.WriteLine(space);
+        Console.WriteLine();
     }
     
     Console.WriteLine(rocket);
     Thread.Sleep(500);
 }
-Console.WriteLine("\n \n \nThe rocket has landed. Woohoo! Another successful landing!");
+
+Console.WriteLine("\nThe rocket has landed");
+Console.WriteLine("\nWoohoo! Another successful landing!");
 
 Console.ReadKey();  
